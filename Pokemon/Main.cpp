@@ -43,6 +43,8 @@ int WINAPI WinMain(
 	ChangeWindowMode(TRUE);
 	DxLib_Init();		//DxLibを初期化
 
+	//あああああああああああああああ
+
 	//Window Init (Windowの初期化)
 	SetWindowInitPosition(WIN_POS_X, WIN_POS_Y);	//背景ポジション
 	SetWindowText("パチットモンスター");			//背景タイトル
