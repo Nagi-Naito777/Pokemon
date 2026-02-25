@@ -1,13 +1,10 @@
 #pragma once
-#include <string>
-
-using namespace std;
 
 struct TECNIQUE
 {
 	int No = -1;		//‹Z‚Ì”Ô†
-	string name;		//‹Z‚Ì–¼‘O
-	string Type;		//‹Z‚Ìƒ^ƒCƒv
+	char name[50];		//‹Z‚Ì–¼‘O
+	char Type[20];		//‹Z‚Ìƒ^ƒCƒv
 	int A = 0;			//‹Z‚Ì‚±‚¤‚°‚«
 	int C = 0;			//‹Z‚Ì‚Æ‚­‚±‚¤
 	int Rate = 0;		//‹Z‚Ì–½’†—¦

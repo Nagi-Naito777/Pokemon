@@ -14,7 +14,7 @@ private:
 		int X = 0;				//X座標
 		int Y = 0;				//Y座標
 		const int X_Lim = 10;	//X座標の限界値
-		const int Y_Lim = 40;	//Y座標の限界値
+		const int Y_Lim = 4;	//Y座標の限界値
 	};
 	Cursol Cur;
 

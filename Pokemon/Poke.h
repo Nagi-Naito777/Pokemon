@@ -1,14 +1,11 @@
 #pragma once
-#include <string>
-
-using namespace std;
 
 //パチモンの構造体を定義
 struct POKEMON {
 	int No = -1;					//図鑑No.
-	string Name;					//名前
-	string Type1;					//タイプ1
-	string Type2;					//タイプ2
+	char Name[50];					//名前
+	char Type1[20];					//タイプ1
+	char Type2[20];					//タイプ2
 	int H = 0;						//HP
 	int A = 0;						//こうげき
 	int B = 0;						//ぼうぎょ
