@@ -18,6 +18,19 @@ private:
 	};
 	Cursol Cur;
 
+	struct Flag {
+		bool Ent = 0;
+		bool Pla = 0;
+	};
+	Flag Fla;
+
+	//今何匹目？かを格納する構造体
+	struct Count {
+		int Pla = 0;
+		int Ene = 0;
+	};
+	Count Cou;
+
 	void Cal();
 	void Cha();
 };
@@ -45,10 +58,55 @@ void SELECT::Cal() {
 	if (Cur.X > (Cur.X_Lim - 1) * POKEMON_CELL) { Cur.X = (Cur.X_Lim - 1) * POKEMON_CELL; }
 	if (Cur.Y < 0) { Cur.Y = 0; }
 	if (Cur.Y > (Cur.Y_Lim - 1) * POKEMON_CELL) { Cur.Y = (Cur.Y_Lim - 1) * POKEMON_CELL; }
+	
+	//エンターキーを押したらフラグを立たせる
+	if (Key[KEY_INPUT_NUMPADENTER] == 1) {
+		Fla.Ent = 1;
+	}
+
+	int p = 0;
+	for (int y = 0; y < Cur.Y_Lim; y++) {
+		for (int x = 0; x < Cur.X_Lim; x++) {
+			//フラグエンターが立っているなおかつ選ばれたモンスターの座標が等しい場合
+			if (Fla.Ent == 1 &&
+				x == Cur.X / POKEMON_CELL &&
+				y == Cur.Y / POKEMON_CELL) {
+				//プレイヤー分岐
+				switch (Fla.Pla) {
+				case 0:
+					Fla.Pla = 1;
+					Pla.Sel[Cou.Pla] = Pokemon[p];
+					Cou.Pla++;
+					break;
+				case 1:
+					Fla.Pla = 0;
+					Pla.Sel[Cou.Ene] = Pokemon[p];
+					Cou.Ene++;
+					//それぞれのモンスターが3匹選ばれたときにバトルシーンに移行
+					if (Cou.Pla == 3 && Cou.Ene == 3) {
+						Sce = MEN::MEN_02_ACTION;
+						Pla.Out = Pla.Sel[0];
+						Ene.Out = Ene.Sel[0];
+					}
+
+					break;
+				}
+			}
+			p++;
+		}
+	}
 }
 
 //描画パート
 void SELECT::Cha() {
+
+	//どちらのプレイヤーがモンスターを選んだかを分かりやすくする
+	switch (Fla.Pla){
+	case 0:
+		DrawFormatString(20, Cur.Y_Lim * POKEMON_CELL + 0, Col.Blu, "Enter Choosing");
+	case 1:
+		DrawFormatString(20, Cur.Y_Lim * POKEMON_CELL + 0, Col.Red, "Enter Choosing");
+	}
 
 	//Pokemon Image Output
 	int p = 0;
@@ -94,6 +152,8 @@ void SELECT::Cha() {
 						Col.Bla, Fon.c[13], "Tec%d:%s",
 						i,Tecnique[Pokemon[p].Tec[i]].name);
 				}
+				//選択したモンスターの拡大画像を表示する関数
+				DrawRotaGraph(100, 300, 2.5, 0.0, Pic.Poke[p], TRUE);
 			}
 			p++;
 		}

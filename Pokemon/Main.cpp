@@ -24,6 +24,8 @@ int Sce = MEN::MEN_00_TITLE;
 
 //Insert header file
 #include "DxLib.h" //一番上じゃないと下のインクルードに適用されない
+#include<iostream>
+#include<string>
 #include "Poke.h"
 #include "Sub.h"
 #include "Pic.h"
@@ -42,8 +44,6 @@ int WINAPI WinMain(
 	//Windowモードで起動
 	ChangeWindowMode(TRUE);
 	DxLib_Init();		//DxLibを初期化
-
-	//あああああああああああああああ
 
 	//Window Init (Windowの初期化)
 	SetWindowInitPosition(WIN_POS_X, WIN_POS_Y);	//背景ポジション
