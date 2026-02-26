@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=2icpkNGaomY&t=139s
 #define WIN_POS_X 0			//ウィンドウの横方向の原点座標
 #define WIN_POS_Y 0			//ウィンドウの縦方向の原点座標
 
-#define POKEMON_KIND 3		//パチモンの合計数
+#define POKEMON_KIND 40		//パチモンの合計数
 #define POKEMON_CELL 50		//パチモン1匹の画像サイズ
 
 //ゲームシーン列挙体
