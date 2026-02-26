@@ -10,7 +10,7 @@ public:
 	void Read() {
 		Tit = LoadGraph("");
 		Bat = LoadGraph("");
-		LoadDivGraph("./resource/puchimon.png", POKEMON_KIND, 3, 1, POKEMON_CELL, POKEMON_CELL, Poke);
+		LoadDivGraph("./resource/puchimon.png", POKEMON_KIND, 10, 4, POKEMON_CELL, POKEMON_CELL, Poke);
 
 	}
 private:

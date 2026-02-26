@@ -80,7 +80,7 @@ void SELECT::Cal() {
 					break;
 				case 1:
 					Fla.Pla = 0;
-					Pla.Sel[Cou.Ene] = Pokemon[p];
+					Ene.Sel[Cou.Ene] = Pokemon[p];
 					Cou.Ene++;
 					//それぞれのモンスターが3匹選ばれたときにバトルシーンに移行
 					if (Cou.Pla == 3 && Cou.Ene == 3) {
@@ -103,9 +103,11 @@ void SELECT::Cha() {
 	//どちらのプレイヤーがモンスターを選んだかを分かりやすくする
 	switch (Fla.Pla){
 	case 0:
-		DrawFormatString(20, Cur.Y_Lim * POKEMON_CELL + 0, Col.Blu, "Enter Choosing");
+		DrawFormatString(20, Cur.Y_Lim * POKEMON_CELL + 0, Col.Blu, "Player Choosing");
+		break;
 	case 1:
 		DrawFormatString(20, Cur.Y_Lim * POKEMON_CELL + 0, Col.Red, "Enter Choosing");
+		break;
 	}
 
 	//Pokemon Image Output
@@ -158,4 +160,7 @@ void SELECT::Cha() {
 			p++;
 		}
 	}
+
+	//選択フラグの初期化
+	Fla.Ent = 0;
 }
