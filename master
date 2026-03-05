@@ -1,0 +1,35 @@
+[33mcommit 6e78fa3b42fa7086e95e90ef92fa58a347ed717f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: kanengo_naginagi <tks2573493@stu.o-hara.ac.jp>
+Date:   Thu Feb 26 15:08:57 2026 +0900
+
+    モンスター追加したり配列増やしたり
+
+[33mcommit 346c774f5edfaf3979d74abd6384f90826ea69c0[m
+Author: kanengo_naginagi <tks2573493@stu.o-hara.ac.jp>
+Date:   Thu Feb 26 10:25:38 2026 +0900
+
+    新技と新モンスター追加
+
+[33mcommit 30eb7c46e63fbadb49451f5bf12f5923b7213dc7[m
+Author: kanengo_naginagi <tks2573493@stu.o-hara.ac.jp>
+Date:   Wed Feb 25 11:12:40 2026 +0900
+
+    途中経過
+
+[33mcommit 5f289abe3414cced2efb46de2fcd0dd95d66adf3[m
+Author: kanengo_naginagi <tks2573493@stu.o-hara.ac.jp>
+Date:   Wed Feb 25 09:51:08 2026 +0900
+
+    stringを一旦charに変更&Y座標の最大値を変更
+
+[33mcommit 144d1e2f0c589bdc4a304d7d7e1123fb2ebd99fc[m
+Author: kanengo_naginagi <tks2573493@stu.o-hara.ac.jp>
+Date:   Tue Feb 24 10:10:22 2026 +0900
+
+    一旦変更
+
+[33mcommit 04137ef87c6ee9906908ae27ef6f1b898ee06f24[m
+Author: kanengo_naginagi <tks2573493@stu.o-hara.ac.jp>
+Date:   Tue Feb 24 10:06:15 2026 +0900
+
+    一旦ここでcommitした記録

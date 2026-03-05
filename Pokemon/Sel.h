@@ -160,6 +160,21 @@ void SELECT::Cha() {
 			p++;
 		}
 	}
+	//右側に選んだポケモンの画像を表示
+	DrawFormatString(350, 230, Col.Blu, "Player");
+	for (int p = 0; p < 3; p++) {
+		if (Pla.Sel[p].No != -1) {
+			DrawGraph(350, 250 + p * POKEMON_CELL,
+				Pic.Poke[Pla.Sel[p].No], TRUE);
+		}
+	}
+	for (int e = 0; e < 3; e++) {
+		if (Ene.Sel[e].No != -1) {
+			DrawGraph(450, 250 + e * POKEMON_CELL,
+				Pic.Poke[Ene.Sel[e].No], TRUE);
+		}
+	}
+
 
 	//選択フラグの初期化
 	Fla.Ent = 0;
