@@ -1,6 +1,6 @@
 /*
 参考動画
-https://www.youtube.com/watch?v=2icpkNGaomY&t=139s
+https://youtu.be/2icpkNGaomY?si=_pBUGZQ3LX6J9A5S
 */
 
 //Preprocessor defimition
@@ -78,6 +78,7 @@ int WINAPI WinMain(
 			break;
 		//シーンが02なら戦闘画面
 		case MEN::MEN_02_ACTION:
+			Bat.Out();
 			break;
 		}
 	}

@@ -168,6 +168,7 @@ void SELECT::Cha() {
 				Pic.Poke[Pla.Sel[p].No], TRUE);
 		}
 	}
+	DrawFormatString(450, 230, Col.Red, "Enemy");
 	for (int e = 0; e < 3; e++) {
 		if (Ene.Sel[e].No != -1) {
 			DrawGraph(450, 250 + e * POKEMON_CELL,
