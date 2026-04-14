@@ -6,8 +6,6 @@ https://youtu.be/2icpkNGaomY?si=_pBUGZQ3LX6J9A5S
 //Preprocessor defimition
 #define WIN_MAX_X 500		//ウィンドウの横方向サイズ
 #define WIN_MAX_Y 400		//ウィンドウの縦方向サイズ
-#define WIN_POS_X 0			//ウィンドウの横方向の原点座標
-#define WIN_POS_Y 0			//ウィンドウの縦方向の原点座標
 
 #define POKEMON_KIND 40		//パチモンの合計数
 #define POKEMON_CELL 50		//パチモン1匹の画像サイズ
@@ -46,7 +44,6 @@ int WINAPI WinMain(
 	DxLib_Init();		//DxLibを初期化
 
 	//Window Init (Windowの初期化)
-	SetWindowInitPosition(WIN_POS_X, WIN_POS_Y);	//背景ポジション
 	SetWindowText("パチットモンスター");			//背景タイトル
 	SetGraphMode(WIN_MAX_X, WIN_MAX_Y, 32);			//背景サイズ
 	SetBackgroundColor(255, 255, 255);				//背景色
