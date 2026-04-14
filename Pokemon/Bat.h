@@ -101,7 +101,7 @@ void BATTLE::Cal() {
 			Cur.Act.X = 400;
 			break;
 		case ENT::ENT_01_TEC:
-			Cur.Tec.X = 130;
+			Cur.Tec.X = 230;
 			break;
 		}
 	}
@@ -396,6 +396,10 @@ void BATTLE::Cha() {
 
 	switch (Fla.Ent){
 	case ENT::ENT_00_ACT:
+		DrawBox(20, 300, 250, 350, Col.Whi, TRUE);
+		DrawBox(20, 300, 250, 350, Col.Bla, FALSE);
+		DrawBox(290, 300, 495, 380, Col.Whi, TRUE);
+		DrawBox(290, 300, 495, 380, Col.Bla, FALSE);
 		DrawFormatString(30, 310, Col.Bla, "%s",
 			Pla.Out.Name);
 		DrawFormatString(130, 310, Col.Blu, "(Player)",
@@ -414,11 +418,11 @@ void BATTLE::Cha() {
 			DrawFormatString(Cur.Tec.X, Cur.Tec.Y, Col.Bla, "Å®");
 			DrawFormatString(30, 310, Col.Bla, "%s",
 				Tecnique[Pla.Out.Tec[0]].name);
-			DrawFormatString(150, 310, Col.Bla, "%s",
+			DrawFormatString(250, 310, Col.Bla, "%s",
 				Tecnique[Pla.Out.Tec[1]].name);
 			DrawFormatString(30, 350, Col.Bla, "%s",
 				Tecnique[Pla.Out.Tec[2]].name);
-			DrawFormatString(150, 350, Col.Bla, "%s",
+			DrawFormatString(250, 350, Col.Bla, "%s",
 				Tecnique[Pla.Out.Tec[3]].name);
 			break;
 		case ACT::ACT_01_Exchange:
